@@ -1,0 +1,94 @@
+{% extends 'index/base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block index_active %}
+    active
+{% endblock %}
+
+{% block index %}
+      <head>
+        <style>
+            /* CSS styles go here */
+            .hero {
+                background-color: #f2f2f2;
+                padding: 50px;
+                text-align: center;
+            }
+            .hero__content {
+                margin-top: 30px;
+            }
+            .button {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 12px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .feature {
+                flex: 1;
+                margin: 20px;
+                text-align: center;
+                font: 13px/22px Arial,sans-serif;
+            }
+            .feature h2 {
+                margin-top: 20px;
+                font-size: 24px;
+                font: 13px/22px Arial,sans-serif;
+            }
+            .feature p {
+                margin-top: 10px;
+                font-size: 16px;
+                font: 13px/22px Arial,sans-serif;
+            }
+            .hero__image img {
+                width: 100%;
+            }
+
+            /* Style for images in the feature section */
+            .feature img {
+                width: 80%;
+                height: 50%;
+            }
+        </style>
+    </head>
+    <section class="hero">
+        <div class="hero__image">
+{#            <img src="https://www.example.com/images/hero.jpg" alt="Hero Image">#}
+{#        </div>#}
+        <div class="hero__content">
+            <h1>Welcome to our website!</h1>
+            <p>This is the Concordia Textbook Sharing System. We have developed a unique textbook-sharing model specifically for exam season. Our librarian noticed an increasing demand for course textbooks and proposed a solution to share them with a group of students in the library reading room. Join our community of Concordia students and share textbooks, study together, and succeed together!</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="static/img/feature1.jpg" alt="Feature 1 Image">
+            <h2>Feature 1</h2>
+            <p>Students can check for available reading rooms by course number or textbook. And they can reserve a room and order a textbook if needed. One room per course per time slot.</p>
+        </div>
+        <div class="feature">
+            <img src="static/img/feature2.jpg" alt="Feature 2 Image">
+            <h2>Feature 2</h2>
+            <p>The system allows users to book the room for a maximum of 5 hours. The maximum number of reading rooms for one course will be determined by the number of registered students for that course.</p>
+        </div>
+        <div class="feature">
+            <img src="static/img/feature3.jpg" alt="Feature 3 Image">
+            <h2>Feature 3</h2>
+            <p>The course instructor has access to the booking logs and can see which students are studying together.</p>
+        </div>
+    </section>
+{% endblock %}

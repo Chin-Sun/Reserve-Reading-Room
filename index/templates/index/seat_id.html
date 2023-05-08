@@ -1,0 +1,61 @@
+{% extends 'index/seat.html' %}
+{% block seat %}
+    {% if seat %}
+
+
+        <form action="{% url 'seat' room_id %}" class="m-1 mb-5" method="post">
+            <div class="accordion-item border-0">
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                     data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                        <input type="text" name="room" value="{{ room_id }}">
+                        <input type="text" name="day" value="{{ time_selected_r }}">
+                        <input type="text" name="time" value="{{ time_selected_s }}">
+                        <input type="text" name="timeLength" value="{{ time_selected_l }}">
+{#
+                    </div>
+                </div>
+
+                <h5 class="m-2 mt-5 text-center">Please select a seat number：（
+                    {{ room_1 }}
+
+                    {% if time_selected_r == 1 %}
+                        Today
+                    {% elif time_selected_r == 2 %}
+                        Tomorrow
+                    {% endif %}
+                    {% if time_selected_s == 1 %}
+                        Morning
+                    {% elif time_selected_s == 2 %}
+                        Afternoon
+                    {% else %}
+                        Evening
+                    {% endif %}
+                    )</h5>
+                {% csrf_token %}
+                <div class="col-12">
+                    <div class="row">
+                        {% for i in seat %}
+
+                            <div class="col-1">
+                                <input value="{{ i }}" type="radio" class="btn-check" name="number"
+                                       id="success-outlined-{{ i }}"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-success m-1 w-100 h-85"
+                                       for="success-outlined-{{ i }}">{{ i }}</label>
+                            </div>
+
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="text-end mt-3 ">
+                    <input class="btn-lg btn-primary w-25 m-auto" type="submit" value="Confirm Reservation">
+                </div>
+                <div class="text-end mt-3 ">
+                    <input class="btn-lg btn-primary w-25 m-auto" type="submit" value="Confirm friends' Reservation">
+                </div>
+            </div>
+        </form>
+    {% endif %}
+{% endblock %}

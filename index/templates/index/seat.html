@@ -1,0 +1,79 @@
+{% extends 'index/base.html' %}
+{% load static %}
+{% block title %}
+    Booking Seats
+{% endblock %}
+
+{% block index_bookings %}
+    active
+{% endblock %}
+
+{% block index %}
+    <main class="mb-5">
+        <script type="text/javascript">
+            {#alert("你也有预约，请取消预约后重新预约！");#}
+            {{ msg }}("You also have a booking. Please cancel your booking before making a new one!");
+        </script>
+        <div class="container px-4 py-3" id="custom-cards">
+            <h3 class="pb-2 m-1">Please select a study room, seat, and time</h3>
+            <form action="{% url 'seat' room.id %}" class="row pb-2 g-3 border-bottom">
+                {% csrf_token %}
+                <div class="col-md-3">
+                    <label for="inputCity" class="form-label">Room</label>
+                    <select name="room_id" id="inputCity" class="form-select">
+                        {% for i in rooms %}
+                            <option value="{{ i.id }}" {% if room_id == i.id %} selected {% endif %}>{{ i.name }}
+                            </option>
+                        {% endfor %}
+
+
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="inputState" class="form-label">Date</label>
+                    <select name="day" id="inputState" class="form-select">
+                        <option value="1" {% if time_selected_r == 1 %} selected {% endif %}>Today</option>
+                        <option value="2" {% if time_selected_r == 2 %} selected {% endif %}>Tomorrow</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="inputState" class="form-label">Time</label>
+                    <select name="time" id="inputState" class="form-select">
+                        <option value="1" {% if time_selected_s == 1 %} selected {% endif %} >Morning</option>
+                        <option value="2" {% if time_selected_s == 2 %} selected {% endif %}>Afternoon</option>
+                        <option value="3" {% if time_selected_s == 3 %} selected {% endif %}>Evening</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="inputState" class="form-label">Time Length</label>
+                    <select name="time" id="inputState" class="form-select">
+                        <option value="1" {% if time_selected_l == 1 %} selected {% endif %} >1 hour</option>
+                        <option value="2" {% if time_selected_l == 2 %} selected {% endif %} >2 hours</option>
+                        <option value="3" {% if time_selected_l == 3 %} selected {% endif %} >3 hours</option>
+                        <option value="4" {% if time_selected_l == 4 %} selected {% endif %} >4 hours</option>
+                        <option value="5" {% if time_selected_l == 5 %} selected {% endif %} >5 hours</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <label for="inputZip" class="form-label">Search</label>
+                    <button id="inputZip" type="submit" class="form-control btn btn-outline-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        Search
+                    </button>
+                </div>
+
+            </form>
+            {% block seat %}
+
+            {% endblock %}
+        </div>
+    </main>
+    {#    提示  #}
+
+{% endblock %}
