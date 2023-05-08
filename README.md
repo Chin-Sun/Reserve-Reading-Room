@@ -1,3 +1,3 @@
 # Textbook-Sharing-Room
 ## Demo for our project
-![img](https://github.com/Chin-Sun/Freelancer-Platform/blob/2513e9022bdd4f3e53878b9af6bbb3d467923ba6/Demo/IMG_8035.GIF)
+![img](https://github.com/Chin-Sun/Textbook-Sharing-Room/blob/0f0cd2d010b6bcd814d58e5ac9bfff2c95898903/Demo/IMG_8038.GIF)
