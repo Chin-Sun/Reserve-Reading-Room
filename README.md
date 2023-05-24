@@ -1,4 +1,4 @@
-# Textbook Sharing Room
+# Reserve Reading Room
 ## Introduction
 The system provides a platform for users to reserve reading rooms in the library. To make a reservation, users are required to specify the textbook and course number they will be using. Each reading room has a maximum capacity of ten students. The system functions as follows:
 
