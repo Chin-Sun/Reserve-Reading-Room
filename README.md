@@ -67,7 +67,7 @@ The platform ensures a smooth and fair reservation process for all users while m
 - **Backend Framework**: Django   
 - **Database**: PostgreSQL   
 - **Frontend**: HTML/CSS + JavaScript  
-- **Authentication**: OAuth 2.0 or university SSO (Single Sign-On)  
+- **Authentication**: OAuth 2.0   
 ---
 
 ## 🚀 Development Workflow  
