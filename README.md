@@ -70,20 +70,24 @@ The platform ensures a smooth and fair reservation process for all users while m
 - **Authentication**: OAuth 2.0 or university SSO (Single Sign-On)  
 ---
 
-## 🚀 Development Workflow
-**1. Requirement Gathering:**
+## 🚀 Development Workflow  
+**1. Requirement Gathering:**  
 - Defined use cases for students and instructors  
 - Designed data model with relationships among users, courses, textbooks, and rooms  
-**2. Backend Development:**
+
+**2. Backend Development:**  
 - Implemented reservation logic with validation and conflict checking  
 - Connected to registration API for real-time student-course linkage  
+
 **3. Frontend Development:**
 - Built responsive UI for booking forms, room search, and booking summary  
 - Developed instructor interface to browse logs and visualize study groups  
+
 **4. Business Rule Enforcement:**
 - Capacity enforcement logic  
 - No duplicate course-time-room reservations  
 - Intelligent textbook-based filtering  
+
 **5. Testing & Deployment:**
 - Unit and integration testing  
 - Simulated real-time bookings by multiple users  
