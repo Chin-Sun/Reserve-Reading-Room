@@ -1,14 +1,101 @@
-# Reserve Reading Room
-## Introduction
-The system provides a platform for users to reserve reading rooms in the library. To make a reservation, users are required to specify the textbook and course number they will be using. Each reading room has a maximum capacity of ten students. The system functions as follows:
 
-1. Student Login: Students log into the system using their credentials.  
-2. Check Room Availability: Students can check if a reading room is already booked for their class during their preferred time slot. They can search for availability based on the course number or the textbook.  
-3. Room Capacity: If a reading room is available, the student needs to ensure that it can accommodate them based on its maximum capacity.  
-4. Reservation: If an appropriate reading room is available, the student can reserve it. However, if there are no suitable rooms or all rooms are already booked, the student has the option to reserve a new reading room and order the required textbook from the library.  
-5. Avoid Duplicate Reservations: A student cannot reserve multiple reading rooms for the same course at the same time. However, friends can be added to a reservation by allowing their IDs to be included.  
-6. Time Slots: The system offers a minimum time slot of 1 hour, and users can book the reading room for a maximum of 5 hours.  
-7. Maximum Reading Rooms: The maximum number of reading rooms available for a particular course is determined by the number of students registered for that course. This information is retrieved from the registration system.  
-8. Instructor Access: The course instructor has access to the booking logs, which allow them to see which students are studying together.
-## Demo for our project
 ![img](https://github.com/Chin-Sun/Reserve-Reading-Room/blob/06a5d20b9cf0bcaec45f7e48582f4e3f66658298/Demo/IMG_8038.GIF)
+
+# 📚 Reserve Reading Room – Intelligent Library Booking System
+
+📅 **Project Duration:** [Insert Duration]  
+🔗 **GitHub Repository:** [Reserve_Reading_Room](https://github.com/Chin-Sun/...) *(Update with actual link)*
+
+## 📌 Overview
+
+**Reserve Reading Room** is an intelligent, course-linked library room booking system designed to improve study resource allocation and group learning. It enables students to reserve reading rooms based on specific **courses and textbooks**, enforces **capacity control**, prevents **double-booking**, and provides **instructors with visibility** into collaborative learning groups.
+
+The platform ensures a smooth and fair reservation process for all users while maintaining academic relevance through textbook and course verification.
+
+---
+
+## 🎯 Core Objectives
+
+- Enable **course-specific** and **textbook-based** room reservations  
+- Enforce **capacity limits** and **time slot rules** per reading room  
+- Prevent **duplicate reservations** while supporting group study  
+- Allow **instructors** to monitor group study dynamics  
+- Seamlessly integrate with the university’s **registration system**
+
+---
+
+## 🧩 Key Features
+
+- 🔐 **Student Authentication:**  
+  - Secure login using university credentials  
+  - Role-based access (student vs. instructor)
+
+- 📖 **Course & Textbook Integration:**  
+  - Users must select a valid **course number** and **textbook** during reservation  
+  - Real-time validation with course registration database
+
+- 🏠 **Room Search & Availability Check:**  
+  - Filter rooms by course number or textbook  
+  - Availability shown for selected time slot
+
+- 👥 **Group Booking Support:**  
+  - Invite friends via student ID  
+  - Share room occupancy up to the **10-student capacity limit**
+
+- ⏱ **Flexible Time Slot Management:**  
+  - Minimum booking: **1 hour**, maximum: **5 hours**  
+  - Overlapping time or duplicate course reservations are prevented
+
+- 🆕 **New Room Request & Textbook Ordering:**  
+  - If no rooms are available, system allows students to reserve new rooms  
+  - Automatically triggers **textbook order** from library inventory
+
+- 📈 **Instructor Dashboard:**  
+  - View booking logs for each course  
+  - See group compositions and study patterns
+
+---
+
+## 🛠️ System Architecture
+
+```text
+[Student Interface] ⇄ [Reservation Backend] ⇄ [Room Database]
+                                   ⇓
+                     [Course Registration System]
+                                   ⇓
+                         [Instructor Dashboard]
+```
+- **Backend Framework**: Django / Flask (based on actual implementation)  
+- **Database**: PostgreSQL / MySQL  
+- **Frontend**: HTML/CSS + JavaScript  
+- **Authentication**: OAuth 2.0 or university SSO (Single Sign-On)  
+---
+
+## 🚀 Development Workflow
+**1. Requirement Gathering:**
+- Defined use cases for students and instructors  
+- Designed data model with relationships among users, courses, textbooks, and rooms  
+**2. Backend Development:**
+- Implemented reservation logic with validation and conflict checking  
+- Connected to registration API for real-time student-course linkage  
+**3. Frontend Development:**
+- Built responsive UI for booking forms, room search, and booking summary  
+- Developed instructor interface to browse logs and visualize study groups  
+**4. Business Rule Enforcement:**
+- Capacity enforcement logic  
+- No duplicate course-time-room reservations  
+- Intelligent textbook-based filtering  
+**5. Testing & Deployment:**
+- Unit and integration testing  
+- Simulated real-time bookings by multiple users  
+- Deployed on internal university server / cloud environment  
+---
+
+## 💡 Future Enhancements
+- 📆 Calendar view for room availability  
+- 📲 Mobile app integration for on-the-go booking  
+- 📩 Email notifications for booking confirmations and reminders  
+- 🧠 Analytics dashboard for usage heatmaps and peak times  
+---
+## 🧠 Conclusion
+The Reserve Reading Room platform combines academic relevance with smart resource allocation to support focused, collaborative learning. By embedding course and textbook context into the reservation flow, it ensures that library spaces are used meaningfully, while giving instructors insights into student engagement beyond the classroom.
