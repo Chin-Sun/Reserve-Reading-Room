@@ -11,4 +11,4 @@ The system provides a platform for users to reserve reading rooms in the library
 7. Maximum Reading Rooms: The maximum number of reading rooms available for a particular course is determined by the number of students registered for that course. This information is retrieved from the registration system.  
 8. Instructor Access: The course instructor has access to the booking logs, which allow them to see which students are studying together.
 ## Demo for our project
-![img](https://github.com/Chin-Sun/Textbook-Sharing-Room/blob/0f0cd2d010b6bcd814d58e5ac9bfff2c95898903/Demo/IMG_8038.GIF)
+![img](https://github.com/Chin-Sun/Reserve-Reading-Room/blob/06a5d20b9cf0bcaec45f7e48582f4e3f66658298/Demo/IMG_8038.GIF)
