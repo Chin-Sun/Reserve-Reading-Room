@@ -3,8 +3,7 @@
 
 # 📚 Reserve Reading Room – Intelligent Library Booking System
 
-📅 **Project Duration:** [Insert Duration]  
-🔗 **GitHub Repository:** [Reserve_Reading_Room](https://github.com/Chin-Sun/...) *(Update with actual link)*
+📅 **Project Duration:** 3 days  
 
 ## 📌 Overview
 
